@@ -19,7 +19,9 @@ public class ContratDTO {
     private double montant;
     private int duree;
     private String type;
+    private ClientDTO clientDTO;
     private double tauxCouverture;}
+
 
 
 

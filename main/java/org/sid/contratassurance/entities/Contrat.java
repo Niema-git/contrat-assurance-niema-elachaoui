@@ -28,7 +28,7 @@ public class Contrat {
     private Client client;
 
     @OneToMany(mappedBy = "contrat")
-    private List<Paiment> paiments;
+    private List<Paiment> paiments;}
 
 
 
