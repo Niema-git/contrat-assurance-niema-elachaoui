@@ -1,0 +1,28 @@
+package org.sid.contratassurance.dtos;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.sid.contratassurance.entities.Client;
+import org.sid.contratassurance.entities.Paiment;
+import org.sid.contratassurance.enums.ContratStatus;
+
+import java.util.Date;
+import java.util.List;
+
+
+@Data
+public class ContartDTO {
+
+    private String id ;
+    private Date dateSouscription ;
+    @Enumerated(EnumType.STRING)
+    private ContratStatus status;
+    private Date dateValidation;
+    private double montant;
+    private int duree;
+    private double tauxCouverture;
+
+
+
