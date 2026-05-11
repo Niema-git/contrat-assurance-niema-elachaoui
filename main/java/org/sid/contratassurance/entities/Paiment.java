@@ -1,9 +1,6 @@
 package org.sid.contratassurance.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,9 +17,10 @@ public class Paiment {
     private Long id;
     private Date date;
     private String montant;
+    @Enumerated(EnumType.STRING)
     private PaymentType type;
+    @ManyToOne
+    @JoinColumn(name = "contrat_id")
+    private Contart contrat;
 
-    //son id, sa date, son montant,
-    // son type : Mensualité, Paiement annuel,
-    //Paiement exceptionnel
 }
