@@ -1,4 +1,4 @@
 package org.sid.contratassurance.web;
 
-public class clientRestController {
+public class ContratRestAPI {
 }

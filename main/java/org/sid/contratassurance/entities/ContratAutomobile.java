@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 
 @NoArgsConstructor @AllArgsConstructor
-public class ContratAutomobile extends Contart {
+public class ContratAutomobile extends Contrat {
     private  String matricule;
      private String marque;
      private String modele;

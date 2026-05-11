@@ -14,8 +14,8 @@ import org.sid.contratassurance.enums.NiveauCouverture;
 
 @NoArgsConstructor
 @AllArgsConstructor
-public class ContratSante extends Contart {
-    private String nombrePersonne;
+public class ContratSante extends Contrat {
+    private int nombrePersonne;
     @Enumerated(EnumType.STRING)
     private NiveauCouverture niveau;
 

@@ -20,5 +20,5 @@ public class Client {
     private String email;
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private List<Contart> contrats;
+    private List<Contrat> contrats;
 }

@@ -16,11 +16,11 @@ public class Paiment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Date date;
-    private String montant;
+    private double montant;
     @Enumerated(EnumType.STRING)
     private PaymentType type;
     @ManyToOne
     @JoinColumn(name = "contrat_id")
-    private Contart contrat;
+    private Contrat contrat;
 
 }

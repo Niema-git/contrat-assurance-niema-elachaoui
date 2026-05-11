@@ -1,4 +1,5 @@
 package org.sid.contratassurance.services;
 
-public interface contratService {
+public interface ContratService {
+
 }

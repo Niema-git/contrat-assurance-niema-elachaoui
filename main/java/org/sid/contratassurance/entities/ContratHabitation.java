@@ -14,10 +14,10 @@ import org.sid.contratassurance.enums.LogementType;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ContratHabitation extends Contart{
+public class ContratHabitation extends Contrat {
     @Enumerated(EnumType.STRING)
-    private LogementType type;
+    private LogementType typeLogement;
     private String adresse;
-    private String superficie;
+    private double superficie;
 
 }

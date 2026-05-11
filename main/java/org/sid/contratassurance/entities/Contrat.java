@@ -6,18 +6,18 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.sid.contratassurance.enums.ContratStatus;
 
-import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
 @Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @Data @NoArgsConstructor
 @AllArgsConstructor
 @DiscriminatorColumn(name="TYPE", length = 4 )
-public class Contart {
+public class Contrat {
     @Id
-    private String id ;
-    private Date dateSouscription ;
+    private String id;
+    private Date dateSouscription;
     @Enumerated(EnumType.STRING)
     private ContratStatus status;
     private Date dateValidation;
@@ -26,8 +26,9 @@ public class Contart {
     private double tauxCouverture;
     @ManyToOne
     private Client client;
+
     @OneToMany(mappedBy = "contrat")
-    private List<Paiment> paiments;}
+    private List<Paiment> paiments;
 
 
 
